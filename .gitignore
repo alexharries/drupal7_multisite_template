@@ -1,1 +1,7 @@
-# Created by .ignore support plugin (hsz.mobi)
+# Ignore configured database and settings files, if they end up in here.
+local_databases.php
+local_settings.php
+
+# Ignore PHPStorm.
+.idea
+.idea/*

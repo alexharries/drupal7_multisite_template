@@ -1,0 +1,19 @@
+// Insert your styling here.
+
+// On paragraph pages, set .container-may-be-fluid to be .container.
+body:not(.node-type-paragraph-page) .main-container .container-may-be-fluid,
+body.node-type-paragraph-page.page-node-edit .main-container .container-may-be-fluid {
+  .container;
+}
+
+body.node-type-paragraph-page:not(.page-node-edit) .main-container .container-may-be-fluid {
+  .container-fluid;
+
+  // Don't pad in the edges of the col-xx-12 classes.
+  > section.col-sm-12,
+  > section.col-md-12,
+  > section.col-lg-12 {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

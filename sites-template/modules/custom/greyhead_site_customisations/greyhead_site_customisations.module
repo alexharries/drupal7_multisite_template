@@ -1,0 +1,22 @@
+<?php
+
+/**
+ * greyhead customisations and testing module.
+ */
+
+/**
+ * Implements hook_form_node_form_alter.
+ *
+ * @param $form
+ * @param $form_state
+ */
+function greyhead_site_customisations_form_alter(&$form, $form_state) {
+  // Always encrypt all submitted form data.
+  if (($form['#form_id'] == 'webform_component_edit_form')
+    && array_key_exists('encryption', $form)
+  ) {
+    $form['encryption']['encrypt']['#default_value']
+      = $form['encryption']['encrypt']['#value']
+      = $form['encryption']['encrypt']['#disabled'] = TRUE;
+  }
+}

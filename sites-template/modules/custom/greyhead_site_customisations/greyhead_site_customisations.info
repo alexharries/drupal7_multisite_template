@@ -1,0 +1,8 @@
+name = Greyhead Individual Site Customisations
+description = Little tweaks and adjustments, just for for this website.
+core = 7.x
+version = "7.x-1.0-20160318"
+
+files[] = greyhead_site_customisations.module
+project = Greyhead Drupal
+scripts[] = js/greyhead_site_customisations.js

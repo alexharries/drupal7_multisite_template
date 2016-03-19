@@ -2,16 +2,14 @@
 /**
  * Drupal database configuration file - local_databases.template.php
  *
- * @see /deployment-scripts/deployment-templates/local_databases.template.php
+ * This file should be renamed to "local_databases.php" and moved into the
+ * project root (i.e. one directory above Drupal's index.php).
  *
- * This file will be renamed to "local_databases.php" and moved into the project
- * root when an automagic deployment takes place using the deploy.sh script
- * (which is located in the parent directory above this template).
- *
- * Note that the key of the configuration array maps to the MULTISITE_IDENTIFIER
- * constant, but this script is only intended for use where one project checkout
- * maps to one Drupal website; for security, performance, and to preserve the
- * general sanity of all developers concerned, we don't run Drupal multisites.
+ * Note that the key of the configuration array ("{{MULTISITE_IDENTIFIER}}")
+ * maps to the MULTISITE_IDENTIFIER constant, but this script is only intended
+ * for use where one project checkout maps to one Drupal website; for security,
+ * performance, and to preserve the general sanity of all developers concerned,
+ * we don't run Drupal multisites except for local development purposes.
  *
  * An example of a populated array:
  *
@@ -37,10 +35,23 @@
  * prefix:    ''
  *
  * By:   Alex Harries
- * Date: 16/06/2015
+ * Date: 18th March 2016
+ */
+
+/**
+ * @TODO: script configuration of this file.
  */
 
 $local_databases = array(
+  // This comment and the line below must stay here for automagic deployments to work :)
+  // '{{AD_MULTISITE_IDENTIFIER}}' => array('{{AD_DOMAIN}}' => array('database' => '{{AD_DATABASENAME}}', 'username' => '{{AD_DATABASEUSERNAME}}', 'password' => '{{AD_DATABASEPASSWORD}}')),
+
+  // Note the use of the "AD_" prefix to distinguish the variables above from
+  // the search-replaceable strings, below, which are used by a different
+  // script.
+
+  // The following lines can be added to if you want to manually configure
+  // multiple sites on one codebase, e.g. in a local development environment.
   '{{MULTISITE_IDENTIFIER}}' => array(
     '{{DOMAIN}}' => array(
       'database' => '{{DATABASENAME}}',
@@ -48,4 +59,6 @@ $local_databases = array(
       'password' => '{{DATABASEPASSWORD}}',
     ),
   ),
+
+  // For example: 'myawesomewebsite' => array('myawesomewebsite.co.uk' => array('database' => 'myawesomewebsite_db', 'username' => 'myawesomewebsite_user', 'password' => 'websitesaremyawesome')),
 );

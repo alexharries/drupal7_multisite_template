@@ -43,8 +43,12 @@
  */
 
 $local_databases = array(
-  // This comment and the line below must stay here for automagic deployments to work :)
+  // This comment and the two lines below must stay here for automagic deployments to work :)
   // '{{AD_MULTISITE_IDENTIFIER}}' => array('{{AD_DOMAIN}}' => array('database' => '{{AD_DATABASENAME}}', 'username' => '{{AD_DATABASEUSERNAME}}', 'password' => '{{AD_DATABASEPASSWORD}}')),
+  // {{build-local-dev.sh insert above}}
+
+  // Example on one line:
+  // 'myawesomewebsite' => array('myawesomewebsite.co.uk' => array('database' => 'myawesomewebsite_db', 'username' => 'myawesomewebsite_user', 'password' => 'websitesaremyawesome')),
 
   // Note the use of the "AD_" prefix to distinguish the variables above from
   // the search-replaceable strings, below, which are used by a different
@@ -57,8 +61,18 @@ $local_databases = array(
       'database' => '{{DATABASENAME}}',
       'username' => '{{DATABASEUSERNAME}}',
       'password' => '{{DATABASEPASSWORD}}',
+      'port' => '3306',
     ),
   ),
 
-  // For example: 'myawesomewebsite' => array('myawesomewebsite.co.uk' => array('database' => 'myawesomewebsite_db', 'username' => 'myawesomewebsite_user', 'password' => 'websitesaremyawesome')),
+  // E.g. uncomment the below array block to add another multisite for this
+  // build.
+//  '{{MULTISITE_IDENTIFIER}}' => array(
+//    '{{DOMAIN}}' => array(
+//      'database' => '{{DATABASENAME}}',
+//      'username' => '{{DATABASEUSERNAME}}',
+//      'password' => '{{DATABASEPASSWORD}}',
+//      'port' => '3306',
+//    ),
+//  ),
 );

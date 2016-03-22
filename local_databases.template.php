@@ -45,7 +45,7 @@
 $local_databases = array(
   // This comment and the two lines below must stay here for automagic deployments to work :)
   // '{{AD_MULTISITE_IDENTIFIER}}' => array('{{AD_DOMAIN}}' => array('database' => '{{AD_DATABASENAME}}', 'username' => '{{AD_DATABASEUSERNAME}}', 'password' => '{{AD_DATABASEPASSWORD}}')),
-  // {{build-local-dev.sh insert above}}
+  // {{BUILDSHINSERT}}
 
   // Example on one line:
   // 'myawesomewebsite' => array('myawesomewebsite.co.uk' => array('database' => 'myawesomewebsite_db', 'username' => 'myawesomewebsite_user', 'password' => 'websitesaremyawesome')),

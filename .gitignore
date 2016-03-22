@@ -5,3 +5,4 @@ local_settings.php
 # Ignore PHPStorm.
 .idea
 .idea/*
+.DS_Store

@@ -1,0 +1,35 @@
+  # Warning: you should NOT use a catch-all redirect which, for example,
+  # redirects all requests which aren't to www.example.com to www.example.com,
+  # because this will interfere with development/staging URLs.
+
+  # Gotacha: this file is Apache-specific. If you need to implement redirects
+  # in Nginx, and Nginx is Greek to you, this converter might be worth a look:
+  # http://winginx.com/en/htaccess and http://www.anilcetin.com/convert-apache-htaccess-to-nginx/
+
+  # Example: redirect a few specific URLs to a single domain:
+  # http://example.com, http://monkey.com, http://www.monkey.com and
+  # http://old.monkey.com to http://www.example.com
+#  RewriteCond %{HTTP_HOST} ^example.com$ [OR]
+#  RewriteCond %{HTTP_HOST} ^monkey.com$ [OR]
+#  RewriteCond %{HTTP_HOST} ^www.monkey.com$ [OR]
+#  RewriteCond %{HTTP_HOST} ^old.monkey.com$
+#  RewriteRule (.*)$ http%{ENV:protossl}://www.example.com/$1 [R=301,L]
+
+  # Example: redirect http://example.com, http://www.monkey.com and
+  # http://old.monkey.com to the https version of the same domain.
+#  RewriteCond %{HTTP_HOST} ^(example\.com|monkey\.com|www\.monkey\.com|old\.monkey\.com) [NC]
+#  RewriteCond %{HTTPS} off
+#  RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+  # Redirect a single domain to a new domain.
+#  RewriteCond %{HTTP_HOST} ^nhsnwlondon.dev.fourstudio.co.uk$
+#  RewriteRule (.*)$ http%{ENV:protossl}://development.nhsnwlondon.dev.fourstudio.co.uk/$1 [R=301,L]
+
+  # Example: redirect users who have requested a subdomain which isn't an exact match for
+  # http://themanbookerprize.com to that domain.
+#  RewriteCond %{HTTP_HOST} ^[^.]+\.(themanbookerprize\.com)$ [NC]
+#  RewriteRule ^ http://%1%{REQUEST_URI} [R=301,L,NE]
+
+  # Redirect fourcommunications.com to www.fourcommunications.com
+#  RewriteCond %{HTTP_HOST} ^fourcommunications.com$
+#  RewriteRule (.*)$ http%{ENV:protossl}://www.fourcommunications.com/$1 [R=301,L]

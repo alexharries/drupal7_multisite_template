@@ -72,7 +72,7 @@ settings[bootstrap_cdn] = ''
 
 ; Multi-platform/device hover menus
 ; - See more at: http://webmar.com.au/blog/drupal-bootstrap-3-multilevel-submenus-hover#sthash.VBLa4qgk.dpuf
-scripts[] = 'js/jquery.smartmenus.js'
-scripts[] = 'addons/bootstrap/jquery.smartmenus.bootstrap.js'
+;scripts[] = 'js/jquery.smartmenus.js'
+;scripts[] = 'addons/bootstrap/jquery.smartmenus.bootstrap.js'
 
 

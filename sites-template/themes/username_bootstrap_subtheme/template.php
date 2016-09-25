@@ -297,6 +297,13 @@ function username_bootstrap_subtheme_preprocess_page(&$variables) {
   }
 
   $variables['navbar_classes'] = implode(' ', $variables['navbar_classes_array']);
+  
+  // Add fonts to the page.
+  drupal_add_html_head_link(array(
+    'rel' => 'stylesheet',
+    'href' => '//fonts.googleapis.com/css?family=Della+Respira|Raleway:400,400i,700,700i|Tangerine',
+    'type' => 'text/css'
+  ));
 }
 
 /**

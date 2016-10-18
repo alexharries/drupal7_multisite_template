@@ -1,5 +1,5 @@
-name = {{username}} Bootstrap Sub-theme
-description = A Bootstrap Sub-theme for the {{username}} project.
+name = {{username}} Bootstrap Sub-sub-theme
+description = A Bootstrap Sub-sub-theme for the {{username}} project.
 core = 7.x
 base theme = greyhead_bootstrap
 dependencies[] = greyhead_customisations
@@ -8,16 +8,17 @@ dependencies[] = greyhead_customisations
 ;; Regions
 ;;;;;;;;;;;;;;;;;;;;;
 
-regions[navigation]     = 'Navigation'
-regions[header]         = 'Top Bar'
-regions[highlighted]    = 'Highlighted'
-regions[help]           = 'Help'
-regions[content]        = 'Content'
-regions[sidebar_first]  = 'Primary'
+regions[header_mainmenu] = 'Below header main menu'
+regions[header_search] = 'Below header search'
+regions[header] = 'Top Bar'
+regions[highlighted] = 'Highlighted'
+regions[help] = 'Help'
+regions[content] = 'Content'
+regions[sidebar_first] = 'Primary'
 regions[sidebar_second] = 'Secondary'
-regions[footer]         = 'Footer'
-regions[page_top]       = 'Page top'
-regions[page_bottom]    = 'Page bottom'
+regions[footer] = 'Footer'
+regions[page_top] = 'Page top'
+regions[page_bottom] = 'Page bottom'
 
 
 ;;;;;;;;;;;;;;;;;;;;;
